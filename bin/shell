@@ -1,0 +1,10 @@
+#!/usr/bin/php
+<?php
+    define('OCTO_STANDALONE', true);
+
+    require_once realpath(__DIR__) . '/../../octo/lib/lib.php';
+
+    Octo\systemBoot(__DIR__);
+    Octo\shell();
+
+    call_user_func(Psy\bin());
